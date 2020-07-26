@@ -1,0 +1,114 @@
+/* BASE CSS */
+/*==========*/
+/* variables */
+:root {
+  --pink: #D50870;
+  --gold: #FFBF00;
+  --teal:	#66B2B2;
+  --main-bg-color: grey;
+}
+/* fonts */
+
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/Montseerrat/Montserrat-Black.ttf");
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/Quicksand/Quicksand-VariableFont-wght.ttf");
+}
+
+/* navigation */
+
+.logo {
+  width: 4em;
+}
+
+nav {
+  height: 5em;
+}
+
+/* splash */
+
+.splash-spacer {
+  height: 3em;
+}
+
+#splash {
+  margin-top: 5em;
+  min-height: 25em;
+  margin-bottom: 0;
+}
+
+/* intro */
+
+
+#quote {
+  margin-top: -2em !important;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+
+/* mission */
+
+.spacer {
+  height: 2em;
+}
+
+.mission-header {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/*footer*/
+.footer {
+  min-height: 5em;
+  background-color: var(--alt-bg);
+}
+.footer-links li {
+  display: inline;
+}
+
+.middle-li {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.left-li {
+  padding-right: 0.75em;
+}
+
+.right-li {
+  padding-left: 0.75em;
+}
+
+.footer-logo {
+  height: 5em;
+  padding-left: 2em;
+}
+
+.footer-spacer {
+  height: 0.5em;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+/* body */
+body {
+  background-color: var(--main-bg-color);
+  background-repeat: repeat;
+  font-family: Comfortaa !important;
+}
