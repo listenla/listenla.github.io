@@ -2,22 +2,69 @@
 /*==========*/
 /* variables */
 :root {
-  --pink: #D50870;
-  --gold: #FFBF00;
-  --teal:	#66B2B2;
+  --lt-black: #000501;
+  --lt-white: #FFFFF9;
+  --lt-white: #CDCDCD;
+  --lt-pink: #F4A4A6;
+  --lt-green: #9EC345;
+  --lt-blue: #2FB8DA;
   --main-bg-color: grey;
 }
 /* fonts */
 
 @font-face {
   font-family: Montserrat;
-  src: url("fonts/Montseerrat/Montserrat-Black.ttf");
+  src: url("fonts/Montserrat/Montserrat-Black.ttf");
 }
 
 @font-face {
   font-family: Quicksand;
-  src: url("fonts/Quicksand/Quicksand-VariableFont-wght.ttf");
+  src: url("fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
 }
+
+@font-face {
+  font-family: Quicksand;
+  src: url("fonts/Quicksand/static/Quicksand-Bold.ttf");
+  font-weight: bold;
+}
+
+
+/* General Settings */
+
+body {
+  font-family: Quicksand !important;
+  background-color: var(--lt-white) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat;
+}
+
+section {
+  padding-top: 4em;
+}
+
+.section {
+  background-color: var(--lt-white) !important;
+  color: var(--lt-black);
+}
+
+.section-blue {
+  background-color: var(--lt-blue) !important;
+  color: var(--lt-black);
+}
+
+
+.section-green {
+  background-color: var(--lt-green) !important;
+  color: var(--lt-white);
+}
+
+.section-black {
+  background-color: var(--lt-black) !important;
+  color: var(--lt-white);
+}
+
 
 /* navigation */
 
@@ -27,18 +74,125 @@
 
 nav {
   height: 5em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar a {
+  color: var(--lt-black) !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: var(--lt-green) !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section a {
+  color: var(--lt-pink) !important;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--lt-green) !important;
+}
+
+.btn {
+  background-color: var(--lt-white) !important;
+  border-color: var(--lt-white) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-collapse {
+  margin-left: -50px;
+  padding-left: 50px;
+  left: 0;
 }
 
 /* splash */
+
+.jumbo-spacer {
+  height: 10em;
+}
 
 .splash-spacer {
   height: 3em;
 }
 
+
 #splash {
-  margin-top: 5em;
   min-height: 25em;
   margin-bottom: 0;
+  padding-top: 0 !important;
+  margin-top: -1em;
+}
+
+.jumbotron a {
+  color: var(--lt-pink);
+  background-color: var(--lt-black) !important;
+}
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  background-color:black;
+  height: 100vh;
+}
+.jumbotron video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  opacity:0.8;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+}
+.jumbotron .container {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  color: var(--lt-white);
+  padding-top: 35vh;
+}
+
+.jumbotron hr {
+  border-color: var(--lt-grey);
+  border-width: 1px;
+  border-radius: 50%;
+}
+
+.jumbotron h2, .jumbotron h3{
+  font-weight: bold;
+  color: var(--lt-white);
+  text-shadow:
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000;
+}
+
+.faded-overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 150);
+  height: 105vh;
+  width: 100%;
+  clear: both;
+  margin-top: -5em;
+  padding-top: 10em;
+}
+
+.jumbotron button{
+  background-color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  color: var(--lt-grey);
+  border-color: var(--lt-g);
 }
 
 /* intro */
@@ -68,11 +222,16 @@ nav {
   text-align: center;
 }
 
+#mission {
+  margin-top: -2em;
+}
 
 /*footer*/
 .footer {
-  min-height: 5em;
-  background-color: var(--alt-bg);
+  min-height: 8em;
+  margin-top: -4em;
+  background-color: var(--lt-black);
+  color: var(--lt-white);
 }
 .footer-links li {
   display: inline;
@@ -101,14 +260,11 @@ nav {
 }
 
 .footer a {
-  color: white;
   text-decoration: underline;
 }
-
-
-/* body */
-body {
-  background-color: var(--main-bg-color);
-  background-repeat: repeat;
-  font-family: Comfortaa !important;
+.event {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 1% ,rgba(0, 0, 0, .7) 1%, rgba(0, 0, 0, .7) 56%, rgba(0, 0, 0, 0) 56%);
+  background-size: cover;
 }
