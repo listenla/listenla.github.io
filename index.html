@@ -37,8 +37,10 @@
     var video=document.getElementById("bg-video");
     if(video.muted) {
       video.muted = false;
+      document.getElementById("sound-btn").innerHTML = 'Sound Off';
     } else {
       video.muted = true;
+      document.getElementById("sound-btn").innerHTML = 'Sound On';
     }
   }
   </script>
@@ -104,7 +106,7 @@
             <div class="splash-spacer"></div>
             <hr>
             <button id="sound-btn" onclick="toggleMute();">
-              Sound
+              Sound On
             </button>
           </div>
         </div>
