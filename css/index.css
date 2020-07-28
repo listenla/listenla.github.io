@@ -18,6 +18,12 @@
 }
 
 @font-face {
+  font-family: Montserrat-Medium;
+  src: url("fonts/Montserrat/Montserrat-Medium.ttf");
+  font-weight: lighter;
+}
+
+@font-face {
   font-family: Quicksand;
   src: url("fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
 }
@@ -127,7 +133,6 @@ a:hover {
 }
 
 /* splash */
-
 .jumbo-spacer {
   height: 10em;
 }
@@ -207,8 +212,6 @@ a:hover {
 }
 
 /* intro */
-
-
 #quote {
   margin-top: -2em !important;
 }
@@ -221,6 +224,10 @@ a:hover {
   text-align: right;
 }
 
+.quick {
+  font-family: Quicksand !important;
+  font-weight: bold;
+}
 
 .left-p {
   text-align: left;
@@ -234,6 +241,7 @@ a:hover {
 }
 
 .right-p {
+  font: Quicksand !important;
   text-align: right;
   padding-left: 30%;
   color: var(--lt-gray);
