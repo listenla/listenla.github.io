@@ -4,7 +4,7 @@
 :root {
   --lt-black: #000501;
   --lt-white: #FFFFF9;
-  --lt-white: #CDCDCD;
+  --lt-gray: #CDCDCD;
   --lt-pink: #F4A4A6;
   --lt-green: #9EC345;
   --lt-blue: #2FB8DA;
@@ -88,6 +88,12 @@ nav {
 
 .navbar a {
   color: var(--lt-white) !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.dropdown-menu a {
+  color: var(--lt-black) !important;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -214,6 +220,30 @@ a:hover {
 .right {
   text-align: right;
 }
+
+
+.left-p {
+  text-align: left;
+  padding-right: 30%;
+  color: var(--lt-white);
+  text-shadow:
+    -1px -1px 0 var(--lt-black),
+    1px -1px 0 var(--lt-black),
+    -1px 1px 0  var(--lt-black),
+    1px 1px 0  var(--lt-black);
+}
+
+.right-p {
+  text-align: right;
+  padding-left: 30%;
+  color: var(--lt-gray);
+  text-shadow:
+    -1px -1px 0 var(--lt-black),
+    1px -1px 0 var(--lt-black),
+    -1px 1px 0  var(--lt-black),
+    1px 1px 0  var(--lt-black);
+}
+
 
 
 /* mission */
