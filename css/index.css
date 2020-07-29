@@ -93,7 +93,7 @@ nav {
 }
 
 .navbar a {
-  color: var(--lt-white) !important;
+  color: var(--lt-white)a;
   text-transform: uppercase;
   font-weight: bold;
 }

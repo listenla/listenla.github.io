@@ -15,72 +15,7 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <!-- Animate on Scroll Library CSS -->
   <link rel="stylesheet" href="../css/aos.css">
-
-  <script>
-  function deferVideo() {
-    //defer html5 video loading
-    $("video source").each(function() {
-      var sourceFile = $(this).attr("data-src");
-      $(this).attr("src", sourceFile);
-      var video = this.parentElement;
-      video.load();
-      // uncomment if video is not autoplay
-      video.play();
-    });
-
-  }
-  window.onload = deferVideo;
-  </script>
-
-  <script>
-  function toggleMute() {
-    var video=document.getElementById("bg-video");
-    if(video.muted) {
-      video.muted = false;
-    } else {
-      video.muted = true;
-    }
-  }
-  </script>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="https://listenla.org">
-      <img class="logo" src="../img/logo.png"></img>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav navbar-right">
-        <li class="nav-item">
-          <a class="nav-link" href="../events">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../media">Media</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../vote">Register to Vote</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Take Action
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="../local-elections">Local Elections</a>
-            <a class="dropdown-item" href="../legislation">Recent Legislation</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../local-arts">Local Arts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../lgbt-resources">LGBT Resources</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../contact">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="nav"></nav>
 
   </head>
 
@@ -96,34 +31,7 @@
 
 
 
-    <section id="footer">
-      <div class="footer sticky-bottom">
-        <div class="footer-spacer"></div>
-        <div class="footer-spacer"></div>
-        <ul class="footer-links">
-          <li class="left-li">
-            <a href="../events">Events</a>
-          </li>
-          <li class="middle-li">
-            <a href="../vote">Register to Vote</a>
-          </li>
-          <li class="middle-li">
-            <a href="../lgbt-resources">LGBT Resources</a>
-          </li>
-          <li class="right-li">
-            <a href="../contact">Contact Us</a>
-          </li>
-        </ul>
-        <div class="row">
-          <a class="footer-brand" href="https://listenla.org"></a>
-          <img class="footer-logo" src="../img/logo.png"></img>
-          <div class="footer-text">
-            <div class="footer-spacer"></div>
-            <p>&copy; 2020 Listen LA<br> Through Listening we Understand,<br> Through Understanding we Heal.</p>
-            <div class="footer-spacer"></div>
-          </div>
-        </div>
-      </section>
+    <section id="footer"></section>
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
@@ -133,16 +41,9 @@
       AOS.init();
       </script>
       <script src="../js/bootstrap.min.js"></script>
-      <script>
-      function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
-      $(document).ready(function(){
-        $('video').on('ended',function(){
-          $("#splash-caption-1").fadeTo(1500, 1);
-          sleep(1000).then(() => { $("#splash-caption-2").fadeTo(1500, 1) });
-        });
-      });
+      <script src="../subfolder_content/init.js"></script>
+      <script type="text/javascript">
+         SUBCONTENT.init(["take-action-tab", "recent-legislation-tab"]);
       </script>
     </body>
     </html>
